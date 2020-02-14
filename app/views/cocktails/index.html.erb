@@ -1,9 +1,23 @@
-<h1>Cocktails</h1>
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
+  <%= link_to "#", class: "navbar-brand" do %>
   <% end %>
-</ul>
+    <h1><strong>The Alchemist</strong></h1>
+      <a class="btn btn-ghost" <%= link_to "Create a cocktail", new_cocktail_path %></a>
+</div>
 
-<%= link_to "Create a cocktail", new_cocktail_path %>
-<%= link_to "Remove a cocktail", new_cocktail_path %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1509807995916-c332365e2d9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1942&q=80);">
+  <div class="container">
+    <h1>The Alchemist</h1>
+    <p>UNCONVENTIONAL, DARK & CONTROVERSIAL</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card-category" style="">
+        <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
+      </div>
+    <% end %>
+  </div>
+</dv>
